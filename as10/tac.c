@@ -100,3 +100,62 @@ int main(void)
     }
     return 0;
 }
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+char s[100];
+int i = 0, t = 0;
+
+char expr();
+
+char factor()
+{
+    if (s[i] == '(')
+    {
+        i++;
+        char x = expr();
+        i++;
+        return x;
+    }
+    return s[i++];
+}
+
+char term()
+{
+    char a = factor();
+
+    while (s[i] == '*' || s[i] == '/')
+    {
+        char op = s[i++];
+        char b = factor();
+        printf("t%d = %c %c %c\n", ++t, a, op, b);
+        a = '0' + t;
+    }
+    return a;
+}
+
+char expr()
+{
+    char a = term();
+
+    while (s[i] == '+' || s[i] == '-')
+    {
+        char op = s[i++];
+        char b = term();
+        printf("t%d = %c %c %c\n", ++t, a, op, b);
+        a = '0' + t;
+    }
+    return a;
+}
+
+int main()
+{
+    printf("Enter expression: ");
+    scanf("%99s", s);
+
+    printf("Three Address Code:\n");
+    expr();
+
+    return 0;
+}*/

@@ -118,3 +118,47 @@ int main(void)
 
     return 0;
 }
+/*#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int n, i;
+    char s[100], dest[20], a[20], op, b[20];
+
+    printf("Enter number of instructions: ");
+    scanf("%d", &n);
+    getchar();
+
+    printf("Enter TAC instructions:\n");
+
+    for (i = 0; i < n; i++)
+    {
+        fgets(s, sizeof(s), stdin);
+
+        if (sscanf(s, "%s = %s %c %s", dest, a, &op, b) == 4)
+        {
+            printf("MOV R0, %s\n", a);
+
+            switch (op)
+            {
+                case '+': printf("ADD R0, %s\n", b); break;
+                case '-': printf("SUB R0, %s\n", b); break;
+                case '*': printf("MUL R0, %s\n", b); break;
+                case '/': printf("DIV R0, %s\n", b); break;
+                default: printf("Invalid operator\n"); continue;
+            }
+
+            printf("MOV %s, R0\n", dest);
+        }
+        else if (sscanf(s, "%s = %s", dest, a) == 2)
+        {
+            printf("MOV R0, %s\n", a);
+            printf("MOV %s, R0\n", dest);
+        }
+        else
+            printf("Invalid TAC instruction\n");
+    }
+
+    return 0;
+}*/

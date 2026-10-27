@@ -156,3 +156,58 @@ int main(void)
 
     return 0;
 }
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int n, i;
+    char s[100], a[20], op, b[20], dest[20];
+    long x, y, r;
+
+    printf("Enter number of instructions: ");
+    scanf("%d", &n);
+    getchar();
+
+    printf("Enter TAC instructions:\n");
+
+    for (i = 0; i < n; i++)
+    {
+        fgets(s, sizeof(s), stdin);
+
+        if (sscanf(s, "%s = %s %c %s", dest, a, &op, b) == 4)
+        {
+            if (sscanf(a, "%ld", &x) == 1 &&
+                sscanf(b, "%ld", &y) == 1)
+            {
+                switch (op)
+                {
+                    case '+': r = x + y; break;
+                    case '-': r = x - y; break;
+                    case '*': r = x * y; break;
+                    case '/':
+                        if (y == 0)
+                        {
+                            printf("%s = %s %c %s\n", dest, a, op, b);
+                            continue;
+                        }
+                        r = x / y;
+                        break;
+                    default:
+                        printf("Invalid instruction\n");
+                        continue;
+                }
+                printf("%s = %ld\n", dest, r);
+            }
+            else
+                printf("%s = %s %c %s\n", dest, a, op, b);
+        }
+        else if (sscanf(s, "%s = %s", dest, a) == 2)
+            printf("%s = %s\n", dest, a);
+        else
+            printf("Invalid instruction\n");
+    }
+
+    return 0;
+}*/
