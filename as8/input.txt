@@ -1,0 +1,8 @@
+int a;
+float b;
+char c;
+a = 10;
+b = 20.5;
+c = 'x';
+a = 10.5;
+c = 25;
